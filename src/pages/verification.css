@@ -1,5 +1,5 @@
 .verification-container {
-    max-width: 400px;
+    max-width: 300px; 
     margin: 0 auto;
     text-align: center;
   }
@@ -16,21 +16,22 @@
   }
   
   .input-container input[type="text"] {
-    width: 40px;
-    height: 40px;
+    width: 30px; 
+    height: 30px; 
     margin: 0 5px;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #131212;
     border-radius: 5px;
   }
   
   button {
     display: block;
     margin: 0 auto;
-    padding: 10px 30px; /* Increase padding to make the button wider */
-    font-size: 16px;
-    background-color: #007bff;
+    padding: 10px 20px; 
+    width: 150px;
+    font-size: 19px;
+    background-color: #100249;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -39,7 +40,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #100249;
   }
   
   .success-message {
