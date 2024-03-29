@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { verifyCode } from '../services/service';
 import './verification.css';
+import { useNavigate } from 'react-router-dom';
 
 const VerificationPage = () => {
+  const navigate = useNavigate()
   const [verificationCode, setVerificationCode] = useState(Array(6).fill(''));
   const [verificationResult, setVerificationResult] = useState(null);
   const inputRefs = useRef([]);
@@ -43,6 +45,9 @@ const VerificationPage = () => {
       const code = verificationCode.join('');
       const result = await verifyCode(code);
       setVerificationResult(result);
+      if (result.success) {
+        navigate('/success');
+      }
     } catch (error) {
       console.error('Error:', error);
       setVerificationResult({ success: false, error });
